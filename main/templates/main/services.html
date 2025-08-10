@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - BeautyNailNet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #faf8f7;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e91e63 0%, #ad1457  100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .header .tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .navigation {
+            background: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 0 2rem;
+        }
+
+        .nav-link {
+            color: #2c2c2c;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            padding: 1rem 0;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #e91e63;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            padding: 5rem 0 3rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 4rem;
+            margin-bottom: 5rem;
+        }
+
+        .service-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-image {
+            height: 250px;
+            background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .service-content {
+            padding: 3rem 2rem;
+        }
+
+        .service-title {
+            font-size: 1.8rem;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .service-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .service-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .service-duration {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        .service-price {
+            font-size: 2rem;
+            color: #d4826b;
+            font-weight: bold;
+        }
+
+        .service-button {
+            background: transparent;
+            border: 2px solid #d4826b;
+            color: #d4826b;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .service-button:hover {
+            background: #d4826b;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>BeautyNailNet</h1>
+        <p class="tagline">Your Nails Your Style</p>
+    </header>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/customers/" class="nav-link">Customers</a>
+            <a href="/appointments/" class="nav-link">Appointments</a>
+            <a href="/services/" class="nav-link active">Services</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="section-header">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">Experience luxury nail care with 
+our premium treatments</p>
+        </section>
+
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-number">{{ total_services }}</div>
+                <div class="stat-label">Premium Services</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">${{ avg_price }}</div>
+                <div class="stat-label">Average Price</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-image">
+                    <div class="service-icon">💅</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Signature Manicure</h3>
+                    <p class="service-description">Our most popular 
+treatment featuring nail shaping, cuticle care, and premium polish 
+application.</p>
+                    <div class="service-details">
+                        <span class="service-duration">⏱ 45 
+minutes</span>
+                        <span class="service-price">$65</span>
+                    </div>
+                    <button class="service-button">Book Now</button>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-image">
+                    <div class="service-icon">🎨</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Nail Art Design</h3>
+                    <p class="service-description">Express your style with 
+custom nail art created by our talented artists.</p>
+                    <div class="service-details">
+                        <span class="service-duration">⏱ 90 
+minutes</span>
+                        <span class="service-price">$95</span>
+                    </div>
+                    <button class="service-button">Book Now</button>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-image">
+                    <div class="service-icon">✨</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Luxury Pedicure</h3>
+                    <p class="service-description">Relaxing foot treatment 
+with exfoliation, massage, and premium polish.</p>
+                    <div class="service-details">
+                        <span class="service-duration">⏱ 60 
+minutes</span>
+                        <span class="service-price">$85</span>
+                    </div>
+                    <button class="service-button">Book Now</button>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-image">
+                    <div class="service-icon">💎</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Gel Enhancement</h3>
+                    <p class="service-description">Long-lasting gel 
+application with UV curing for extended wear.</p>
+                    <div class="service-details">
+                        <span class="service-duration">⏱ 75 
+minutes</span>
+                        <span class="service-price">$110</span>
+                    </div>
+                    <button class="service-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.service-button').forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = '/appointments/';
+            });
+        });
+    </script>
+</body>
+</html>

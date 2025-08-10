@@ -1,22 +1,33 @@
 from django.shortcuts import render
 
-# Create your views here.
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import *
-
 def homepage(request):
-    # Get some sample data for the homepage
-    customers_count = Customer.objects.count() if 'Customer' in globals() else 0
-    appointments_count = Appointment.objects.count() if 'Appointment' in globals() else 0
-    
     context = {
-        'customers_count': customers_count,
-        'appointments_count': appointments_count,
+        'customers_count': 5,
+        'appointments_count': 10,
     }
     return render(request, 'main/homepage.html', context)
 
 def customers(request):
-    customers = Customer.objects.all()[:10] if 'Customer' in globals() else []
-    return render(request, 'main/customers.html', {'customers': customers})
+    context = {
+        'customers': [],
+        'total_customers': 0,
+        'page_title': 'Customer Management'
+    }
+    return render(request, 'main/customers.html', context)
 
+def appointments(request):
+    context = {
+        'appointments': [],
+        'total_appointments': 0,
+        'page_title': 'Appointments Management'
+    }
+    return render(request, 'main/appointments.html', context)
+
+def services(request):
+    context = {
+        'services': [],
+        'total_services': 0,
+        'avg_price': 50,
+        'page_title': 'Services & Pricing'
+    }
+    return render(request, 'main/services.html', context)

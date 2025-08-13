@@ -31,3 +31,8 @@ def services(request):
         'page_title': 'Services & Pricing'
     }
     return render(request, 'main/services.html', context)
+def project(request):
+	context ={
+	   'page_title':'About the Project'	
+	}
+	return render(request,'main/project.html', context)

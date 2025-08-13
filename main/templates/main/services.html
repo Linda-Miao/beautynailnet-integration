@@ -1,339 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - BeautyNailNet</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: #faf8f7;
-            color: #2c2c2c;
-            line-height: 1.6;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #e91e63 0%, #ad1457  100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            letter-spacing: 3px;
-            margin-bottom: 1rem;
-        }
-
-        .header .tagline {
-            font-size: 1.3rem;
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        .navigation {
-            background: white;
-            padding: 1.5rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            padding: 0 2rem;
-        }
-
-        .nav-link {
-            color: #2c2c2c;
-            text-decoration: none;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            padding: 1rem 0;
-            position: relative;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: #e91e63;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            padding: 5rem 0 3rem;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            color: #2c2c2c;
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-            font-style: italic;
-        }
-
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 5rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            color: #e91e63;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 4rem;
-            margin-bottom: 5rem;
-        }
-
-        .service-item {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-image {
-            height: 250px;
-            background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .service-icon {
-            font-size: 4rem;
-            color: white;
-        }
-
-        .service-content {
-            padding: 3rem 2rem;
-        }
-
-        .service-title {
-            font-size: 1.8rem;
-            color: #2c2c2c;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .service-description {
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .service-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }
-
-        .service-duration {
-            color: #888;
-            font-size: 0.95rem;
-        }
-
-        .service-price {
-            font-size: 2rem;
-            color: #d4826b;
-            font-weight: bold;
-        }
-
-        .service-button {
-            background: transparent;
-            border: 2px solid #d4826b;
-            color: #d4826b;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .service-button:hover {
-            background: #d4826b;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        body { font-family: Arial; background: #f8f9fa; margin: 0; }
+        .header { background: linear-gradient(135deg, #e91e63, #ad1457); color: white; padding: 3rem; text-align: center; }
+        .header h1 { font-size: 3rem; margin: 0; }
+        .header .tagline { font-size: 1.3rem; font-style: italic; opacity: 0.9; margin-top: 0.5rem; }
+        .navbar { background: white; padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar a { color: #e91e63; text-decoration: none; margin: 0 2rem; font-weight: bold; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
+        /* Services Styles */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+        .service-card h3 { color: #e91e63; font-size: 1.5rem; margin-bottom: 1rem; }
+        .service-card .price { font-size: 1.8rem; font-weight: bold; color: #2c2c2c; margin: 1rem 0; }
+        .service-card .description { color: #666; line-height: 1.6; margin-bottom: 1.5rem; }
+        .book-service-btn { background: #e91e63; color: white; padding: 0.8rem 2rem; border: none; border-radius: 25px; cursor: pointer; font-size: 1rem; }
+        
+        /* Footer Styles */
+        .footer { background: #2c2c2c; color: white; padding: 3rem 0; margin-top: 3rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; text-align: center; }
+        .social-icons { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-icon { background: #e91e63; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem; }
+        .footer-subscribe { display: flex; justify-content: center; gap: 0; max-width: 400px; margin: 2rem auto; }
+        .footer-subscribe input { flex: 1; padding: 0.8rem; border: none; border-radius: 0; font-size: 1rem; }
+        .footer-subscribe button { background: #e91e63; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 0; font-size: 1rem; cursor: pointer; }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>BeautyNailNet</h1>
-        <p class="tagline">Your Nails Your Style</p>
+        <h1>💅 BeautyNailNet</h1>
+        <p class="tagline">Your Nails, Your Style</p>
     </header>
-
-    <nav class="navigation">
-        <div class="nav-container">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/customers/" class="nav-link">Customers</a>
-            <a href="/appointments/" class="nav-link">Appointments</a>
-            <a href="/services/" class="nav-link active">Services</a>
-        </div>
+    
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/customers/">Customers</a>
+        <a href="/appointments/">Appointments</a>
+        <a href="/services/">Services</a>
     </nav>
-
+    
     <div class="container">
-        <section class="section-header">
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">Experience luxury nail care with 
-our premium treatments</p>
-        </section>
-
-        <div class="stats-row">
-            <div class="stat-item">
-                <div class="stat-number">{{ total_services }}</div>
-                <div class="stat-label">Premium Services</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">${{ avg_price }}</div>
-                <div class="stat-label">Average Price</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Satisfaction Rate</div>
-            </div>
-        </div>
-
+        <h2 style="text-align: center; color: #2c2c2c; font-size: 2.5rem; margin-bottom: 1rem;">Our Services</h2>
+        <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 3rem;">Professional nail care services tailored to your style</p>
+        
         <div class="services-grid">
-            <div class="service-item">
-                <div class="service-image">
-                    <div class="service-icon">💅</div>
-                </div>
-                <div class="service-content">
-                    <h3 class="service-title">Signature Manicure</h3>
-                    <p class="service-description">Our most popular 
-treatment featuring nail shaping, cuticle care, and premium polish 
-application.</p>
-                    <div class="service-details">
-                        <span class="service-duration">⏱ 45 
-minutes</span>
-                        <span class="service-price">$65</span>
-                    </div>
-                    <button class="service-button">Book Now</button>
-                </div>
+            <div class="service-card">
+                <h3>Signature Manicure</h3>
+                <div class="price">$65</div>
+                <div class="description">Complete nail care including cuticle treatment, shaping, and premium polish application with long-lasting finish.</div>
+                <button class="book-service-btn">Book Now</button>
             </div>
             
-            <div class="service-item">
-                <div class="service-image">
-                    <div class="service-icon">🎨</div>
-                </div>
-                <div class="service-content">
-                    <h3 class="service-title">Nail Art Design</h3>
-                    <p class="service-description">Express your style with 
-custom nail art created by our talented artists.</p>
-                    <div class="service-details">
-                        <span class="service-duration">⏱ 90 
-minutes</span>
-                        <span class="service-price">$95</span>
-                    </div>
-                    <button class="service-button">Book Now</button>
-                </div>
+            <div class="service-card">
+                <h3>Nail Art Design</h3>
+                <div class="price">$95</div>
+                <div class="description">Custom artistic designs created by our skilled technicians. From elegant patterns to trendy seasonal styles.</div>
+                <button class="book-service-btn">Book Now</button>
             </div>
-
-            <div class="service-item">
-                <div class="service-image">
-                    <div class="service-icon">✨</div>
-                </div>
-                <div class="service-content">
-                    <h3 class="service-title">Luxury Pedicure</h3>
-                    <p class="service-description">Relaxing foot treatment 
-with exfoliation, massage, and premium polish.</p>
-                    <div class="service-details">
-                        <span class="service-duration">⏱ 60 
-minutes</span>
-                        <span class="service-price">$85</span>
-                    </div>
-                    <button class="service-button">Book Now</button>
-                </div>
+            
+            <div class="service-card">
+                <h3>Luxury Pedicure</h3>
+                <div class="price">$85</div>
+                <div class="description">Relaxing foot treatment with exfoliation, moisturizing, and professional polish application in a spa-like environment.</div>
+                <button class="book-service-btn">Book Now</button>
             </div>
-
-            <div class="service-item">
-                <div class="service-image">
-                    <div class="service-icon">💎</div>
-                </div>
-                <div class="service-content">
-                    <h3 class="service-title">Gel Enhancement</h3>
-                    <p class="service-description">Long-lasting gel 
-application with UV curing for extended wear.</p>
-                    <div class="service-details">
-                        <span class="service-duration">⏱ 75 
-minutes</span>
-                        <span class="service-price">$110</span>
-                    </div>
-                    <button class="service-button">Book Now</button>
-                </div>
+            
+            <div class="service-card">
+                <h3>Gel Enhancement</h3>
+                <div class="price">$110</div>
+                <div class="description">Long-lasting gel application for strengthened nails with superior shine and chip-resistant finish lasting up to 3 weeks.</div>
+                <button class="book-service-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>French Manicure</h3>
+                <div class="price">$75</div>
+                <div class="description">Classic elegant look with clean white tips and natural base. Perfect for any occasion or professional setting.</div>
+                <button class="book-service-btn">Book Now</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Express Service</h3>
+                <div class="price">$45</div>
+                <div class="description">Quick polish change and basic nail care for busy schedules. Perfect for touch-ups and maintenance.</div>
+                <button class="book-service-btn">Book Now</button>
             </div>
         </div>
     </div>
 
+
+                
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">IG</a>
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">FB</a>
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">X</a>
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">LI</a>
+
+            </div>
+            <p>📞 (360) 123-4567 | 📧 hello@beautynailnet.com | 📍 Lacey, Washington</p>
+
+            <div class="footer-subscribe">
+                <input type="email" placeholder="Subscribe for updates">
+                <button type="button">Subscribe</button>
+            </div>
+    
+            <p style="font-size: 2rem; margin: 2rem 0;">💅✨🎨</p>
+            <p>&copy; 2025 BeautyNailNet - Your Nails, Your Style</p>
+        </div>
+    </footer>
+
     <script>
-        document.querySelectorAll('.service-button').forEach(button => {
-            button.addEventListener('click', function() {
-                window.location.href = '/appointments/';
-            });
-        });
+        // Removed carousel JavaScript since Instagram section was removed
     </script>
 </body>
 </html>

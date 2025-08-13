@@ -3,93 +3,131 @@
 <head>
     <title>BeautyNailNet - Your Nails, Your Style</title>
     <style>
-        body { font-family: Arial; margin: 0; background: #f8f9fa; }
-        .hero { background: linear-gradient(135deg, #e91e63, #ad1457); color: white; text-align: center; padding: 4rem 2rem; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .tagline { font-size: 1.3rem; margin-bottom: 2rem; font-style: italic; }
-        .cta-btn { background: white; color: #e91e63; padding: 1rem 2rem; text-decoration: none; border-radius: 25px; font-weight: bold; 
-}
+        body { font-family: Arial; background: #f8f9fa; margin: 0; }
+        .header { background: linear-gradient(135deg, #e91e63, #ad1457); color: white; padding: 3rem; text-align: center; }
+        .header h1 { font-size: 3rem; margin: 0; }
+        .header .tagline { font-size: 1.3rem; font-style: italic; opacity: 0.9; margin-top: 0.5rem; }
         .navbar { background: white; padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .navbar a { color: #e91e63; text-decoration: none; margin: 0 2rem; font-weight: bold; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .stats { display: flex; justify-content: center; gap: 2rem; margin: 3rem 0; flex-wrap: wrap; }
-        .stat { background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .stat-number { font-size: 2.5rem; color: #e91e63; font-weight: bold; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
-        .service { background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .service-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .service-price { font-size: 1.5rem; color: #e91e63; font-weight: bold; }
-        .section-title { text-align: center; font-size: 2.5rem; color: #2c2c2c; margin: 3rem 0 2rem; }
-        .btn { background: #e91e63; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 25px; display: inline-block; 
-margin: 1rem; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(233, 30, 99, 0.1), rgba(233, 30, 99, 0.1)), url('banner.jpg'); background-size: cover; background-position: center; padding: 5rem 0; 
+text-align: center; margin: 2rem 0; border-radius: 15px; }
+        .hero h2 { font-size: 3rem; color: #2c2c2c; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; color: #666; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-btn { background: #e91e63; color: white; padding: 1rem 2rem; border: none; border-radius: 25px; cursor: pointer; font-size: 1.1rem; text-decoration: none; display: inline-block; 
+}
+        .cta-btn.secondary { background: transparent; color: #e91e63; border: 2px solid #e91e63; }
+        
+        /* About Section */
+        .about { background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 3rem 0; text-align: center; }
+        .about h3 { font-size: 2rem; color: #2c2c2c; margin-bottom: 1rem; }
+        .about p { color: #666; line-height: 1.8; font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+        
+        /* Services Highlight */
+        .services-highlight { margin: 3rem 0; }
+        .services-highlight h3 { text-align: center; font-size: 2.5rem; color: #2c2c2c; margin-bottom: 2rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-highlight { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+        .service-highlight h4 { color: #e91e63; font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .service-highlight .price { font-size: 1.5rem; font-weight: bold; color: #2c2c2c; margin: 0.5rem 0; }
+        .service-highlight p { color: #666; font-size: 0.9rem; }
+        
+        /* Footer Styles */
+        .footer { background: #2c2c2c; color: white; padding: 3rem 0; margin-top: 3rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; text-align: center; }
+        .social-icons { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-icon { background: #e91e63; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; 
+font-size: 1.2rem; }
+        .footer-subscribe { display: flex; justify-content: center; gap: 0; max-width: 400px; margin: 2rem auto; }
+        .footer-subscribe input { flex: 1; padding: 0.8rem; border: none; border-radius: 0; font-size: 1rem; }
+        .footer-subscribe button { background: #e91e63; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 0; font-size: 1rem; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="hero">
+    <header class="header">
         <h1>💅 BeautyNailNet</h1>
         <p class="tagline">Your Nails, Your Style</p>
-        <p>Professional nail care services with premium treatments</p>
-        <a href="/appointments/" class="cta-btn">Book Your Appointment</a>
-    </div>
-
+    </header>
+    
     <nav class="navbar">
         <a href="/">Home</a>
         <a href="/customers/">Customers</a>
         <a href="/appointments/">Appointments</a>
         <a href="/services/">Services</a>
     </nav>
-
+    
     <div class="container">
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">{{ customers_count }}+</div>
-                <div>Happy Customers</div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Luxury Nail Care in Lacey, Washington</h2>
+            <p>Experience professional nail artistry in a relaxing, modern environment. From classic manicures to creative nail art, we bring your vision to life with precision and care.</p>
+            <div class="cta-buttons">
+                <a href="/appointments/" class="cta-btn">Book Appointment</a>
+                <a href="/services/" class="cta-btn secondary">View Services</a>
             </div>
-            <div class="stat">
-                <div class="stat-number">{{ appointments_count }}+</div>
-                <div>Appointments</div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about">
+            <h3>Welcome to BeautyNailNet</h3>
+            <p>At BeautyNailNet, we believe that beautiful nails are an expression of your unique style. Our skilled technicians use premium products and the latest techniques to deliver 
+exceptional results that last. Whether you're looking for a classic French manicure, intricate nail art, or a relaxing pedicure, we create a personalized experience that leaves you feeling 
+confident and beautiful.</p>
+        </section>
+        
+        <!-- Services Highlight -->
+        <section class="services-highlight">
+            <h3>Popular Services</h3>
+            <div class="services-grid">
+                <div class="service-highlight">
+                    <h4>Gel Enhancement</h4>
+                    <div class="price">$110</div>
+                    <p>Long-lasting gel application with superior shine and chip-resistant finish.</p>
+                </div>
+                
+                <div class="service-highlight">
+                    <h4>Nail Art Design</h4>
+                    <div class="price">$95</div>
+                    <p>Custom artistic designs from elegant patterns to trendy seasonal styles.</p>
+                </div>
+                
+                <div class="service-highlight">
+                    <h4>Luxury Pedicure</h4>
+                    <div class="price">$85</div>
+                    <p>Relaxing foot treatment with exfoliation and moisturizing in a spa-like environment.</p>
+                </div>
+                
+                <div class="service-highlight">
+                    <h4>Signature Manicure</h4>
+                    <div class="price">$65</div>
+                    <p>Complete nail care with cuticle treatment, shaping, and premium polish application.</p>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-number">98%</div>
-                <div>Satisfaction Rate</div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Our Premium Services</h2>
-        <div class="services">
-            <div class="service">
-                <div class="service-icon">💅</div>
-                <h3>Signature Manicure</h3>
-                <div class="service-price">$65</div>
-            </div>
-            <div class="service">
-                <div class="service-icon">🎨</div>
-                <h3>Nail Art Design</h3>
-                <div class="service-price">$95</div>
-            </div>
-            <div class="service">
-                <div class="service-icon">✨</div>
-                <h3>Luxury Pedicure</h3>
-                <div class="service-price">$85</div>
-            </div>
-            <div class="service">
-                <div class="service-icon">💎</div>
-                <h3>Gel Enhancement</h3>
-                <div class="service-price">$110</div>
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <a href="/services/" class="btn">View All Services</a>
-            <a href="/appointments/" class="btn">Book Appointment</a>
-        </div>
-
-        <h2 class="section-title">Contact Us</h2>
-        <div style="text-align: center; margin: 2rem 0;">
-            <p><strong>📞 (360) 123-4567</strong></p>
-            <p><strong>📧 hello@beautynailnet.com</strong></p>
-            <p><strong>📍 Lacey, Washington</strong></p>
-        </div>
+        </section>
     </div>
+                
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">IG</a>
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">FB</a>
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">X</a>
+    <a href="https://www.linkedin.com/in/linda-m-14166517a/" class="social-icon" target="_blank">LI</a>
+            </div>
+            <p>📞 (360) 123-4567 | 📧 hello@beautynailnet.com | 📍 Lacey, Washington</p>
+
+            <div class="footer-subscribe">
+                <input type="email" placeholder="Subscribe for updates">
+                <button type="button">Subscribe</button>
+            </div>
+    
+            <p style="font-size: 2rem; margin: 2rem 0;">💅✨🎨</p>
+            <p>&copy; 2025 BeautyNailNet - Your Nails, Your Style</p>
+        </div>
+    </footer>
 </body>
 </html>
